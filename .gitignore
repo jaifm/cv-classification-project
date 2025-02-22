@@ -1,0 +1,22 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore virtual environment folders
+venv/
+.venv/
+
+# Ignore large data or CSV files (if you don't want them in version control)
+data/
+*.csv
+
+# Ignore OS-specific hidden files
+.DS_Store
+Thumbs.db
+
+# Ignore proposal documents
+docs/
+*.docx
