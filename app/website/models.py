@@ -8,7 +8,6 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150))
     firstname = db.Column(db.String(150))
     cvs = db.relationship('CV')
-    analyses = db.relationship('CVData')
 
 class CV(db.Model):
     id = db.Column(db.Integer, primary_key=True)
