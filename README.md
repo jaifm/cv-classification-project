@@ -77,7 +77,7 @@ cv-classification-project/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/jaifam/cv-classification-project.git
+git clone https://github.com/jaifm/cv-classification-project.git
 cd cv-classification-project
 ```
 ### Environment Setup
