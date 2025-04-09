@@ -7,7 +7,7 @@
 
 ## Project Overview
 
-The aim of this dissertation is to explore the effectiveness of machine learning algorithms—specifically **K-Nearest Neighbors (KNN)**, **Support Vector Machines (SVM)**, **Naive Bayes**, and **Decision Trees**—for classifying CVs (resumes). The best-performing algorithm will then be integrated into a **Flask-based web application**, providing students with personalised skill gap analysis and tailored recommendations to enhance employability.
+The aim of this dissertation is to explore the effectiveness of machine learning algorithms—specifically **K-Nearest Neighbors (KNN)**, **Support Vector Machines (SVM)**, **Naive Bayes**, and **Decision Trees** and **BERT**—for classifying CVs (resumes). The best-performing algorithm will then be integrated into a **Flask-based web application**, providing students with personalised skill gap analysis and tailored recommendations to enhance employability.
 
 
 ## Aims and Objectives
