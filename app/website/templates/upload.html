@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Upload CV{% endblock %}
+
+{% block content %}
+<div class="combined-section">
+    <h1>📤 Upload Your CV for Analysis</h1>
+    <p>Welcome to the first step in optimizing your CV and discovering new career possibilities!</p>
+
+    <h2>🔧 What to Do:</h2>
+    <ul>
+        <li>Upload your CV in .pdf format. Our system will:</li>
+        <ul>
+            <li>Analyse your CV using advanced machine learning models.</li>
+            <li>Classify it into a relevant job category.</li>
+            <li>Provide a skill report and recommendations.</li>
+        </ul>
+    </ul>
+
+    <h2>✅ Upload Guidelines:</h2>
+    <ul>
+        <li>File formats supported: .pdf</li>
+        <li>Keep the content structured and text-based (avoid images or scanned documents).</li>
+        <li>Make sure your CV includes sections like Education, Experience, Skills, and Projects for best results.</li>
+    </ul>
+
+    <h2>⚠️ Privacy Notice:</h2>
+    <p>Your CV is processed securely and not stored after analysis. No personal information is collected or shared. This tool is intended for educational and self-development purposes only.</p>
+
+    <h2>📎 Upload Your CV Below:</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Choose File:</label>
+        <input type="file" id="file" name="file" accept=".pdf" required>
+        <button type="submit">🔍 Start Analysis</button>
+    </form>
+
+    {% if predicted_category %}
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Analysis Complete!</h4>
+        <p>Your CV has been classified into the category: <strong>{{ predicted_category }}</strong>.</p>
+    </div>
+
+    <div class="alert alert-info">
+        <h4>Top Skills for {{ predicted_category }}:</h4>
+        <ul>
+            {% for skill in category_skills[predicted_category] %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="alert alert-secondary">
+        <h4>General CV Improvement Tips:</h4>
+        <ul>
+            <li><strong>Tailor Your CV to Each Job Application:</strong> Customize your CV to align with the specific requirements of each role. Highlight relevant skills and experiences that match the job description.</li>
+            <li><strong>Highlight Achievements with Quantifiable Results:</strong> Instead of listing duties, focus on accomplishments. Use metrics to demonstrate the impact of your work, such as "Increased sales by 20% over six months."</li>
+            <li><strong>Keep Your CV Concise and Relevant:</strong> Aim for a CV length of one to two pages, focusing on the most pertinent information. Prioritize clarity and avoid unnecessary details.</li>
+            <li><strong>Use a Clean and Professional Layout:</strong> Ensure your CV is easy to read by using a consistent font, appropriate spacing, and clear headings. A well-structured format enhances readability.</li>
+            <li><strong>Incorporate Keywords from the Job Description:</strong> Many employers use Applicant Tracking Systems (ATS) to screen CVs. Including relevant keywords can help your CV pass through these systems.</li>
+            <li><strong>Include a Professional Summary:</strong> Start with a brief summary that encapsulates your qualifications and career goals, providing a snapshot of what you bring to the role.</li>
+            <li><strong>Showcase Relevant Skills:</strong> List skills that are pertinent to the job, including both technical and soft skills, to give employers a comprehensive view of your capabilities.</li>
+            <li><strong>Proofread for Errors:</strong> Carefully check your CV for spelling and grammatical mistakes to maintain professionalism and attention to detail.</li>
+            <li><strong>Update Your CV Regularly:</strong> Keep your CV current by adding new experiences, skills, and certifications as you acquire them.</li>
+            <li><strong>Include Relevant Additional Sections:</strong> Add sections like certifications, volunteer work, or projects that are relevant to the job and demonstrate your qualifications.</li>
+        </ul>
+        <p>Implementing these tips can enhance your CV's effectiveness and improve your chances of securing interviews.</p>
+    </div>
+    {% endif %}
+
+    <p>Want to know how we process your CV? Visit the About page to learn more about the algorithms we use.</p>
+</div>
+{% endblock %}

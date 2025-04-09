@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="combined-section">
+    <h1>ℹ️ About This Tool</h1>
+    <p>Welcome to the CV Classifier & Skill Advisor — a smart tool designed to help university students understand how their CVs align with different career paths and identify areas for improvement.</p>
+
+    <h2>🤖 Powered by BERT: Why It Matters</h2>
+    <p>This tool uses BERT (Bidirectional Encoder Representations from Transformers), a cutting-edge machine learning model developed by Google, to classify your CV with a high degree of accuracy.</p>
+
+    <h2>🔍 What is BERT?</h2>
+    <p>BERT is a Natural Language Processing (NLP) model that understands the context and meaning of words in a sentence — not just individual terms. This makes it much more effective than older models at interpreting the real content of your CV.</p>
+
+    <h2>🧠 Why BERT for CV Classification?</h2>
+    <ul>
+        <li>Understands the context of your skills and experience.</li>
+        <li>Can classify your CV even if the job title isn’t explicitly mentioned.</li>
+        <li>Handles complex sentence structures and real-world writing styles.</li>
+        <li>Offers state-of-the-art accuracy in text classification tasks.</li>
+    </ul>
+
+    <h2>📊 What Happens After Classification?</h2>
+    <p>Once your CV is classified into a job category:</p>
+    <ul>
+        <li>Your key skills are extracted using NLP.</li>
+        <li>You receive a skill report and recommendations to help you prepare for those roles.</li>
+    </ul>
+
+    <h2>🔐 Your Privacy</h2>
+    <ul>
+        <li>CVs are not stored after processing.</li>
+        <li>No personal information is saved or shared.</li>
+        <li>This tool is intended for educational and self-improvement purposes only.</li>
+    </ul>
+
+    <h2>🛠️ Built With:</h2>
+    <ul>
+        <li>BERT (HuggingFace Transformers) for classification</li>
+        <li>spaCy for skill extraction</li>
+        <li>Flask for the backend</li>
+        <li>HTML, CSS, and JavaScript for the frontend</li>
+    </ul>
+    <p>Designed and developed as part of a university research project on AI in career guidance.</p>
+</div>
+{% endblock %}

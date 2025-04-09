@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Account{% endblock %}
+
+{% block content %}
+<div class="combined-section">
+    <h1>👤 Account Settings</h1>
+
+    <h2>📧 Update Email Address</h2>
+    <form method="POST" action="/account">
+        <label for="email">New Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your new email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit">Update Email</button>
+    </form>
+
+    <h2>📄 Uploaded CVs</h2>
+    {% if cvs %}
+    <ul>
+        {% for cv in cvs %}
+        <li>
+            Uploaded on {{ cv.date.strftime('%Y-%m-%d') }} - Prediction: <strong>{{ cv.cv_data.data }}</strong>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No CVs uploaded yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,82 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--beige);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--buff);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+header nav ul li a:hover {
+    color: var(--tea-green);
+}
+
+/* Combined Section */
+.combined-section {
+    background-color: var(--cornsilk);
+    margin: 2rem auto;
+    max-width: 900px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.combined-section h1, .combined-section h2 {
+    color: var(--buff);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.combined-section p, .combined-section ul, .combined-section ol {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.combined-section ul, .combined-section ol {
+    padding-left: 1.5rem;
+}
+
+.combined-section ul li, .combined-section ol li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--papaya-whip);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

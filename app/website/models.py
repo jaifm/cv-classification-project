@@ -1,6 +1,12 @@
 from . import db
 from flask_login import UserMixin
 from sqlalchemy.sql import func
+import pandas as pd
+
+# Load the dataset to extract unique category names
+data_path = r"C:\Users\ItsLo\Desktop\Dissertation\Project\cv-classification-project\data\resume_data.csv"
+df = pd.read_csv(data_path)
+CATEGORY_MAPPING = {i: category for i, category in enumerate(df['Category'].unique())}
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
